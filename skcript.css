@@ -1,0 +1,67 @@
+// Lista com 50 curiosidades sobre tecnologia
+const curiosidades = [
+  " O primeiro 'bug' de computador foi uma mariposa presa em um computador em 1947.",
+  " O primeiro domínio registrado na internet foi o Symbolics.com, em 15 de março de 1985.",
+  " O nome da linguagem 'Python' foi inspirado no grupo de comédia britânico Monty Python.",
+  " O primeiro HD do mundo foi lançado pela IBM em 1956 e tinha apenas 5 MB de capacidade.",
+  " O mascote do Linux é um pinguim chamado Tux.",
+  " O termo 'Wi-Fi' não significa nada; é apenas um nome comercial criado por uma empresa de branding.",
+  " O primeiro texto enviado por SMS foi 'Merry Christmas' (Feliz Natal), em 3 de dezembro de 1992.",
+  " A palavra 'Robô' vem do tcheco 'robota', que significa 'trabalho forçado'.",
+  " Cerca de 90% do dinheiro do mundo existe apenas em formato digital.",
+  " O primeiro videogame criado foi 'Tennis for Two', em 1958, jogado em um osciloscópio.",
+  " O criador do Bitcoin usa o pseudônimo Satoshi Nakamoto, mas sua verdadeira identidade é desconhecida.",
+  " O primeiro computador comercial do mundo foi o UNIVAC I, entregue em 1951.",
+  " O logotipo da marca Android é chamado de 'Bugdroid'.",
+  " Mais de 500 horas de vídeo são enviadas para o YouTube a cada minuto.",
+  " O primeiro tweet da história foi enviado por Jack Dorsey em 2006 e dizia: 'just setting up my twttr'.",
+  " A linguagem JavaScript foi criada em apenas 10 dias por Brendan Eich em 1995.",
+  " O teclado QWERTY foi projetado originalmente para desacelerar a digitação e evitar que teclas travassem.",
+  " O primeiro trojan da história do computador foi disfarçado como um questionário sobre a AIDS em 1989.",
+  " O site mais visitado do mundo é o Google, processando mais de 8,5 bilhões de buscas por dia.",
+  " O Google originalmente se chamava 'BackRub'.",
+  " O primeiro smartphone do mundo foi o IBM Simon, lançado em 1992 com tela sensível ao toque.",
+  " A imagem usada como fundo padrão do Windows XP (chamada 'Bliss') é uma foto real sem edição.",
+  " Estima-se que mais de 300 bilhões de e-mails sejam enviados todos os dias.",
+  " A Wikipédia possui mais de 60 milhões de artigos em centenas de idiomas.",
+  " O primeiro controle remoto de TV sem fio funcionava utilizando flashes de luz e chamava-se Flash-Matic.",
+  " A nave Apollo 11, que levou o homem à Lua, tinha menos poder de processamento do que uma calculadora simples hoje.",
+  " O símbolo '@' era usado no século XVI por mercadores para indicar a unidade de medida 'arroba'.",
+  " A linguagem Java se chamava originalmente 'Oak', devido a uma árvore de carvalho na janela de seu criador.",
+  " O primeiro motor de busca da internet chamava-se 'Archie', criado em 1990.",
+  " O leitor de código de barras foi patenteado em 1952 e usado pela primeira vez em um pacote de chicletes.",
+  " Os cabos submarinos de fibra óptica são responsáveis por mais de 99% do tráfego internacional de dados.",
+  " A primeira foto enviada para a internet foi de uma banda de comédia chamada Les Horribles Cernettes.",
+  " A primeira página da web criada pelo fundador da WWW, Tim Berners-Lee, ainda está no ar.",
+  " O micro-ondas foi inventado acidentalmente quando um engenheiro percebeu que um radar derreteu um chocolate em seu bolso.",
+  " O robô Curiosity que explora Marte canta 'Parabéns pra Você' para si mesmo todo ano em seu aniversário.",
+  " O termo 'Capcha' significa 'Completely Automated Public Turing test to tell Computers and Humans Apart'.",
+  " O primeiro pendrive foi vendido em 2000 pela Trek Technology e tinha 8 MB de capacidade.",
+  " O Windows 1.0 foi lançado em novembro de 1985 e exigia apenas 256 KB de memória RAM.",
+  " O aplicativo Instagram foi criado e lançado em apenas 8 semanas por Kevin Systrom e Mike Krieger.",
+  " A primeira compra realizada via e-commerce no mundo foi um CD da banda Sting em 1994.",
+  " O jogo Pac-Man foi desenhado com base no formato de uma pizza com uma fatia faltando.",
+  " Em 1999, o fundador do PayPal foi eleito o criador da 'pior ideia de negócio do ano'.",
+  " A tecla 'Caps Lock' foi inventada para substituir o mecanismo de trava de maiúsculas das máquinas de escrever.",
+  " O supercomputador mais rápido do mundo realiza quadrilhões de cálculos por segundo.",
+  " O formato de imagem GIF foi criado em 1987 por Steve Wilhite.",
+  " O termo 'Spam' para e-mails indesejados veio de uma esquete de comédia do grupo Monty Python.",
+  " O primeiro webcam do mundo foi criada em Cambridge para checar se a cafeteira local estava cheia.",
+  " Existem mais conexões móveis ativas no planeta do que pessoas no mundo.",
+  " O ecossistema de código aberto Linux é a base para o sistema operacional Android.",
+  " A tecnologia Bluetooth foi batizada em homenagem a um rei viking dinamarquês do século X."
+];
+
+// Seleciona os elementos do HTML
+const botao = document.querySelector(".botao");
+const mensagem = document.querySelector(".mensagem");
+
+// Função para sortear e exibir uma curiosidade aleatória
+function mostrarMensagem() {
+  const indiceAleatorio = Math.floor(Math.random() * curiosidades.length);
+  mensagem.textContent = curiosidades[indiceAleatorio];
+  mensagem.style.color = "#28a745"; // Muda a cor da mensagem para verde
+}
+
+// Escuta o clique no botão e chama a função
+botao.addEventListener("click", mostrarMensagem);
